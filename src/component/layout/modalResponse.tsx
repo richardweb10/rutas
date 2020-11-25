@@ -13,14 +13,14 @@ const ModalResponse: React.FunctionComponent<Props> = (props) => {
     },
     buttonsStyling: false,
   });
-  enum response {
+  /*enum response {
     'success',
     'warning',
     'error',
     'info',
     'question',
   }
-  /*let resp: any = '';
+  let resp: any = '';
   // let text = '';
   switch (props.res) {
     case 200:
