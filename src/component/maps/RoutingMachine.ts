@@ -1,4 +1,4 @@
-import * as React from 'react';
+//import * as React from 'react';
 import { MapLayer, withLeaflet, MapLayerProps } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet-routing-machine';

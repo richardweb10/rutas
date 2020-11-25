@@ -20,7 +20,7 @@ const ModalResponse: React.FunctionComponent<Props> = (props) => {
     'info',
     'question',
   }
-  let resp: any = '';
+  /*let resp: any = '';
   // let text = '';
   switch (props.res) {
     case 200:
@@ -32,7 +32,7 @@ const ModalResponse: React.FunctionComponent<Props> = (props) => {
     default:
       resp = response.error;
       break;
-  }
+  }*/
   swalWithBootstrapButtons.fire(props.title, props.text, 'error');
 
   return <div></div>;

@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Map, TileLayer, MapControl } from 'react-leaflet';
+import React from 'react';
+import { Map, TileLayer } from 'react-leaflet';
 import Routing from './RoutingMachine';
 import L from 'leaflet';
 import geo from './dataGeo';

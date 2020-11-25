@@ -1,4 +1,4 @@
-import React, { Component, createRef } from "react";
+import React, {  createRef } from "react";
 import Map from "./map";
 import ModalResponse from "../layout/modalResponse";
 var rutas: Array<string> = [],
@@ -26,7 +26,7 @@ class MapComponent extends React.Component<State> {
 
   generateRutas = (ruta: string) => {
     const re = /^[1-5\b]+$/;
-    if (ruta.includes("1") && ruta != "") {
+    if (ruta.includes("1") && ruta !== "") {
       if (re.test(ruta)) {
         this.rutasDiv.current!.innerHTML = "";
         this.routes(ruta);
@@ -53,7 +53,7 @@ class MapComponent extends React.Component<State> {
     for (i = 0; i < points.length; i++) {
       point = points.splice(i, 1);
       usedPoints.push(point);
-      if (points.length == 0 && usedPoints[0][0] == "1") {
+      if (points.length === 0 && usedPoints[0][0] === "1") {
         rutas[rutas.length] = usedPoints.join("");
       }
       this.routes(points.join(""));
