@@ -76,9 +76,9 @@ jobs:
       - run:
           name: "Auth AWS"
           command: 
-            export aws_access_key_id ${AWS_ACCESS_KEY_ID}
-            export aws_secret_access_key ${AWS_SECRET_ACCESS_KEY}
-            export region ${AWS_REGION}
+            aws configure --profile master set aws_access_key_id ${AWS_ACCESS_KEY_ID}
+            aws configure --profile master set aws_secret_access_key ${AWS_SECRET_ACCESS_KEY}
+            aws configure --profile master set region ${AWS_REGION}
       - run: aws s3 ls
       - run: 
           name: "Deploy to S3"
