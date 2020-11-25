@@ -67,6 +67,7 @@ class MapComponent extends React.Component<State> {
     return (
       <div className="container-rutas">
         <h1>Generador de rutas</h1>
+        <h6>Con Circleci</h6>
         <div className="group calculador">
           <input
             type="text"
