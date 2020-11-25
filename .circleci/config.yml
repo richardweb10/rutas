@@ -89,7 +89,9 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               aws s3 sync build/ s3://${PRODUCTION_BUCKET} --delete
-              aws cloudfront create-invalidation --distribution-id "${PRODUCTION_DISTRIBUTION_ID}" --paths /index.html
+              AWS_PAGER="" aws cloudfront create-invalidation \
+              --distribution-id "${PRODUCTION_DISTRIBUTION_ID}" \
+              --paths '/*'
             elif [ "${CIRCLE_BRANCH}" == "develop" ]; then
               aws s3 sync build/ s3://${STAGING_BUCKET} --delete
               aws cloudfront create-invalidation --distribution-id "${STAGING_DISTRIBUTION_ID}" --paths /index.html
