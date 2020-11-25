@@ -83,6 +83,7 @@ jobs:
             aws configure set aws_secret_access_key ${AWS_SECRET_ACCESS_KEY}
             aws configure set region ${AWS_REGION}
       - run: aws s3 ls
+      - run: ls
       - run: 
           name: "Deploy to S3"
           command: |
