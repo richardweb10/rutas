@@ -75,7 +75,7 @@ jobs:
       - run: aws --version
       - run:
           name: "Auth AWS"
-          command: 
+          command: |
             aws configure --profile master set aws_access_key_id ${AWS_ACCESS_KEY_ID}
             aws configure --profile master set aws_secret_access_key ${AWS_SECRET_ACCESS_KEY}
             aws configure --profile master set region ${AWS_REGION}
